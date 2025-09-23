@@ -12,5 +12,7 @@ inserir livros no banco.
 • função cadastrar_livro(titulo, autor, ano) que insere um
 livro na tabela. -->
 
-
+<!-- etapa 3  -->
+ <!-- Criar uma função listar_livros() que mostre todos os
+livros cadastrados e Exibir colunas: ID, Título, Autor, Ano, Disponibilidade. --> 
 
