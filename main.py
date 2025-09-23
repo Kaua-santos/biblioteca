@@ -3,6 +3,7 @@
 import sqlite3
 import _sqlite3
 # etapa 1
+
 conexao = sqlite3.connect("biblioteca.db")
 cursor = conexao.cursor()
 
@@ -16,6 +17,22 @@ cursor.execute("""
      )                
  """)
 print("Tabela criada com sucesso!")
+
+# etapa 2 
+
+def cadastrar_livros(titulo, autor,ano): 
+    conn = conexao()
+    cursor = conn.cursor 
+
+    cursor.execute("""
+        INSERT INTO livros (titulo, autor, ano) 
+        VALUES (?, ?, ?)
+    """, (titulo, autor, ano, 'SIM'))
+# Todo livro novo deve ser cadastrado com disponivel = "Sim". 
+
+
+
+
 
 
 
