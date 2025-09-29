@@ -62,7 +62,7 @@ def disponibilizar_livros(id_livro):
         conn = sqlite3.connect("biblioteca.db")
         cursor = conn.cursor()
 
-        # verifica os status atual
+        # verifica os status atual do livro
         cursor.execute("SELECT disponivel FROM livros WHERE id = ?", (id_livro,))
         resultado = cursor.fetchone()
 
@@ -70,7 +70,7 @@ def disponibilizar_livros(id_livro):
             status_atual = resultado[0].upper()
             novo_status = 'NÂO' if status_atual == 'SIM' else 'SIM'
 
-            # atualizando o status 
+            # atualizando o status do livro
             cursor.execute("UPDATE livros SET disponivel = ? WHERE id = ?", (novo_status, id_livro))
             conn.commit()
             print(f"Disponibilidade do livro com ID {id_livro} atualizada para: {novo_status}")
@@ -81,12 +81,24 @@ def disponibilizar_livros(id_livro):
     finally:
         conn.close()
 
+# etapa 5 remoção de livros 
+
+def remover_livros(id):
+    try: 
+        conn = sqlite3.connect('biblioteca.db')
+        cursor = conn.cursor()
+
+        cursor.execute("DELETE FROM livros WHERE id = ?", (id,))
+        conn.commit()
+
+        if cursor.rowcount > 0:
+            print(f"Livro com ID {id} removido com sucesso!")
+        else:
+            print(f"Nenhum livro encontrado com ID {id}.")
+    except sqlite3.Error as e:
+        print("Erro ao remover livro:", e)
+    finally:
+        conn.close()
 
 
-
-
-
-
-
-
-
+# 
