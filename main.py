@@ -9,13 +9,14 @@ cursor = conexao.cursor()
 
  # Criando uma tabela no banco chamada de "biblioteca"
 cursor.execute("""
-     CREATE TABLE IF NOT EXISTS livros (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      autor TEXT NOT NULL,
-      ano INTEGER,
-      disponivel TEXT    
-      )                
-  """)
+    CREATE TABLE IF NOT EXISTS livros (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        titulo TEXT NOT NULL,
+        autor TEXT NOT NULL,
+        ano INTEGER,
+        disponivel TEXT    
+    )                
+""")
 print("Tabela criada com sucesso!")
 
 # etapa 2 
@@ -101,4 +102,47 @@ def remover_livros(id):
         conn.close()
 
 
-# 
+# Etapa 6 Menu interativo 
+def menu():
+    while True:
+        print("---MENU BIBLIOTECA---")
+        print("1. cadastrar livro")
+        print("2. listar livros")
+        print("3. atualizar disponibilidade do livro")
+        print("4. remover livro")
+        print("5. sair")
+
+        escolha_ = input("escolha uma opção: ")
+
+        if escolha_ == "1":
+            titulo = input("titulo do livro: ")
+            autor = input("autor do livro: ")
+            try:
+                ano = int(input("Ano de publicação do livro: "))
+                cadastrar_livros(titulo, autor, ano)
+            except ValueError:
+                print("Ano invalido. digite um número inteiro.")
+        
+        elif escolha_ == "2":
+            listar_livros()
+
+        elif escolha_ == "3":
+            try:
+                id_livro = int(input("ID do livro para atualizar atualizar: "))
+                disponibilizar_livros(id_livro)
+            except ValueError:
+                print("ID invalido. digite um numero inteiro.")
+
+        elif escolha_ == "4":
+            try:
+                id_livro = int(input("ID do livro a remover: "))
+                remover_livros(id_livro)
+            except ValueError:
+                print("ID invalido. digite um número inteiro.")
+
+        elif escolha_ == "5":
+            print("saindo...")
+            break
+
+        else:
+            print("opção invalidaa!!")
