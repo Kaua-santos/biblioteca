@@ -36,4 +36,24 @@ pelo ID. -->
 Cada opção deve chamar a função correspondente.  -->
 
 
-<!--  -->
+<!-- etapa 6 -->
+<!-- • Implementar um menu de opções no main.py:
+1. Cadastrar livro
+2. Listar livros
+3. Atualizar disponibilidade
+4. Remover livro
+5. Sair
+
+Cada opção deve chamar a função correspondente. --> 
+
+<!-- etapa 7  -->
+<!-- • Criar o arquivo app.py.
+• Implementar a interface gráfica com:
+o Cadastrar Livro (formulário).
+o Listar Livros (tabela).
+o Atualizar Disponibilidade (botão).
+o Remover Livro (bônus).
+o Relatório por Autor (bônus).
+• A interface deve usar as mesmas funções de banco já
+criadas. -->
+
