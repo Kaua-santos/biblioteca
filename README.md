@@ -1,59 +1,46 @@
-<!-- etapa 1  -->
+# 📚 Sistema de Gerenciamento de Biblioteca
 
-<!-- estrutura do projeto e primeiro commit -->
-<!-- Criando uma tabela no banco chamada de "biblioteca" -->
+Este é um projeto simples de gerenciamento de biblioteca desenvolvido em Python, utilizando banco de dados SQLite3. O sistema permite cadastrar, listar, atualizar a disponibilidade e remover livros do banco.
 
-<!-- etapa 2 -->
+## ✅ Funcionalidades
 
-<!-- Todo livro novo deve ser cadastrado com
-disponivel = "Sim". -->
-<!-- Implementar no main.py uma função que permita
-inserir livros no banco.
-• função cadastrar_livro(titulo, autor, ano) que insere um
-livro na tabela. -->
+- 📘 Cadastrar novos livros
+- 📖 Listar todos os livros cadastrados
+- 🔄 Atualizar a disponibilidade de um livro (SIM/NÃO)
+- ❌ Remover livros do sistema
+- 📋 Interface de menu interativo via terminal
 
-<!-- etapa 3  -->
- <!-- Criar uma função listar_livros() que mostre todos os
-livros cadastrados e Exibir colunas: ID, Título, Autor, Ano, Disponibilidade. --> 
+---
 
-<!-- etapa 4  -->
-<!--• Criar função que altere o campo disponivel:
-o Se estava "Sim", vira "Não".
-o Se estava "Não", vira "Sim".-->
+## ⚙️ Tecnologias Utilizadas
 
-<!-- etapa 5  -->
-<!-- Criar função remover_livro(id) que remova um livro
-pelo ID. -->
+- Python 3
+- SQLite (banco de dados local)
+- Biblioteca `sqlite3` (padrão do Python)
 
-<!-- etapa 5  -->
-<!-- Implementar um menu de opções no main.py:
-1. Cadastrar livro
-2. Listar livros
-3. Atualizar disponibilidade
-4. Remover livro
-5. Sair
+---
 
-Cada opção deve chamar a função correspondente.  -->
+## 📂 Estrutura do Projeto
 
+```bash
+biblioteca/
+├── biblioteca.db        # Banco de dados SQLite (criado automaticamente)
+├── biblioteca.py        # Script principal com todas as funções e o menu
+├── README.md            # Este arquivo
 
-<!-- etapa 6 -->
-<!-- • Implementar um menu de opções no main.py:
-1. Cadastrar livro
-2. Listar livros
-3. Atualizar disponibilidade
-4. Remover livro
-5. Sair
+---MENU BIBLIOTECA---
+1. cadastrar livro
+2. listar livros
+3. atualizar disponibilidade do livro
+4. remover livro
+5. sair
+📌 Observações
+Todo novo livro é cadastrado com o status de disponível = "SIM".
 
-Cada opção deve chamar a função correspondente. --> 
+A tabela do banco de dados (livros) será criada automaticamente ao executar o programa pela primeira vez.
 
-<!-- etapa 7  -->
-<!-- • Criar o arquivo app.py.
-• Implementar a interface gráfica com:
-o Cadastrar Livro (formulário).
-o Listar Livros (tabela).
-o Atualizar Disponibilidade (botão).
-o Remover Livro (bônus).
-o Relatório por Autor (bônus).
-• A interface deve usar as mesmas funções de banco já
-criadas. -->
+O banco de dados é salvo no arquivo biblioteca.db na mesma pasta do script.
 
+🧑‍💻 Autor
+Desenvolvido por [Kauã Santos]
+💬 Contato: [kaua7santos7oliveiraa@gmail.com]
