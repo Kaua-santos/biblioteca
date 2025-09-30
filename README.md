@@ -22,7 +22,7 @@ Este é um projeto simples de gerenciamento de biblioteca desenvolvido em Python
 
 ## 📂 Estrutura do Projeto
 
-```bash
+
 biblioteca/
 ├── biblioteca.db        # Banco de dados SQLite (criado automaticamente)
 ├── biblioteca.py        # Script principal com todas as funções e o menu
